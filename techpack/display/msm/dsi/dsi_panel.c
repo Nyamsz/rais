@@ -716,9 +716,9 @@ static int dsi_panel_update_backlight(struct dsi_panel *panel,
 
 	if (panel->bl_config.bl_inverted_dbv)
 		bl_lvl = (((bl_lvl & 0xff) << 8) | (bl_lvl >> 8));
-
-	if (panel->bl_config.bl_move_high_8b)
-		bl_lvl = bl_lvl >> 8;
+	//still bug, 	
+	//if (panel->bl_config.bl_move_high_8b)
+	//	bl_lvl = bl_lvl >> 8;
 	
 	if (panel->bl_config.bl_dcs_subtype == 0xc2)
 		rc = dsi_panel_dcs_set_display_brightness_c2(dsi, bl_lvl);

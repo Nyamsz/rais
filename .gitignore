@@ -138,3 +138,5 @@ kernel/configs/android-*.cfg
 arch/arm64/boot/dts/vendor/
 new_/
 out/
+compile.sh
+kernel_build.log
