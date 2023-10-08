@@ -718,7 +718,8 @@ static int dsi_panel_update_backlight(struct dsi_panel *panel,
         bl_lvl = bl_lvl >> 8;
 		//bl_lvl = bl_lvl & 0xff >> 4 ?
 	}
-	else if (panel->bl_config.bl_inverted_dbv)
+	
+	if (panel->bl_config.bl_inverted_dbv)
 		bl_lvl = (((bl_lvl & 0xff) << 8) | (bl_lvl >> 8));
 	
 	if (panel->bl_config.bl_dcs_subtype == 0xc2)
